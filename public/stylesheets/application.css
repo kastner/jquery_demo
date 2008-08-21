@@ -13,6 +13,7 @@ a { color: #8C4C4C; }
 .box {
   padding: 0.938em; /* 15.0px at 16px base */
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   background: rgb(214,192,141);
   background: -webkit-gradient(linear, 0 top, 3 100, from(#F2C35D), to(rgb(214,192,141)));
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
@@ -27,14 +28,14 @@ a { color: #8C4C4C; }
   margin-bottom: 0.625em; /* 10.0px at 16px base */
   text-shadow: 0 1px 0 rgba(255,255,255,0.2);
   font-size: 2.25em;
-  font-family: "Gotham-Thin";
+  font-family: "Gotham-Thin", "GothamThin", sans;
 }
 
 #header h2 a { text-decoration: none; color: black; }
 
 #header p {
   margin-top: -1em;
-  font-family: "Gotham-XLight";
+  font-family: "Gotham-XLight", "GothamExLight";
 }
 
 #page {
