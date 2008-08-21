@@ -1,0 +1,8 @@
+JQuery Demo for Advancing with Rails
+====================================
+
+This is a demonstration Rails application that is little more than a dressed-up scaffold.
+The aim is to demonstrate:
+
+1. jquery and rails (in it's simplest form)
+2. wycats/reinh's jquery autocomplete plugin

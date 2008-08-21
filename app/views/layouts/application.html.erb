@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>JQuery Demo <%= @title %></title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "application" %>
+  
+  <%= javascript_include_tag "jquery.dimenisions.js" %>
+  <%= javascript_include_tag "jquery.ui.autocomplete.js" %>
+  <%= javascript_include_tag "jquery.ui.autocomplete.ext.js" %>
+  <%= stylesheet_link_tag "jquery.ui.autocomplete.css" %>
+  
+</head>
+<body>
+  <div id="header" class="box">
+    <h2><a href="/">☆ Advancing With Rails</a></h2>
+    <p>With <a href="http://dablog.rubypal.com/" title="DABlog  David A. Black's weblog">David A. Black</a> and <a href="http://metaatem.net/" title="Meta | ateM">Erik Kastner</a></p>
+  </div>
+  <% if flash[:notice] %>
+  <div class="box" id="flash-notice"><%= h flash[:notice] %></div>
+  <% end %>
+  <div id="page" class="box">
+    <%= yield %>
+  </div>
+</body>
+</html>

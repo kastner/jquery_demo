@@ -1,0 +1,25 @@
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= label_tag "author" %><br />
+    <%= text_field_tag "author", (@book.author && book.author.name), :size => 30, :autocomplete => "off" %>
+  </p>
+
+  <p>
+    <%= f.submit button_text %>
+  </p>
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+  $("#book_title").focus();
+  $("#author").autocomplete({
+    list: <%= @authors.map(&:name).to_json %>,
+    timeout: 100,
+    match: function(typed) { return this.match(new RegExp(typed, "i")); }
+  })
+</script>
